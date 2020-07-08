@@ -6,6 +6,7 @@ import { FiMail } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
+import emailjs from 'emailjs-com';
 
 // Componentes
 import getValidationErrors from '../../utils/getValidationErrors';
@@ -18,10 +19,17 @@ import { Container, Contact, Background } from './styles';
 // Imgs
 import Ak from '../../assets/Ak.svg';
 
+interface FormularioProps {
+  name: string;
+  email: string;
+  phone: number;
+  mensagem?: string;
+}
+
 const Formulario: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
 
-  const handleSubmit = useCallback(async (data: object) => {
+  const handleSubmit = useCallback(async (data: FormularioProps) => {
     try {
       formRef.current?.setErrors({});
 
@@ -40,8 +48,30 @@ const Formulario: React.FC = () => {
         abortEarly: false,
       });
 
-      console.log(data);
+      const newName = data.name;
+      const newEmail = data.email;
+      const newPhone = data.phone;
+      const newMessage = data.mensagem;
+
+      const templateFileds = {
+        reply_to: newEmail,
+        newName,
+        newPhone,
+        newMessage,
+        newEmail,
+        reply: newEmail,
+      };
+
+      await emailjs.send(
+        'gmail',
+        'ID_DO_TEMPLATE',
+        templateFileds,
+        'ID_DO_Usuario',
+      );
+
+      formRef.current?.reset();
     } catch (err) {
+      console.log(err);
       const errors = getValidationErrors(err);
 
       formRef.current?.setErrors(errors);
