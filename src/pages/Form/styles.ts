@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import city from '../../assets/city.jpg';
+import img from '../../assets/img.svg';
 
 export const Container = styled.div`
   height: 100vh;
@@ -11,18 +11,17 @@ export const Container = styled.div`
 
 export const Contact = styled.div`
   display: grid;
-  grid-template-rows: 65px 100px auto auto;
+  grid-template-rows: 65px 200px auto;
   grid-gap: 30px;
   align-items: center;
   justify-content: center;
 
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
 
   img {
     margin-left: 85%;
     width: 60px;
-    opacity: 50%;
   }
 
   p {
@@ -34,50 +33,17 @@ export const Contact = styled.div`
     max-width: 500px;
   }
 
-  span {
-    color: #666360;
-    font-size: 20px;
-  }
-
-  input {
-    background: #fdcdcc;
-    border-radius: 10px;
-    border: 2px solid #fdcdcc;
-    padding: 16px;
-    width: 100%;
-    color: #666360;
-    display: flex;
-    align-items: center;
-  }
-
-  textarea {
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-    height: 100px;
-
-    background: #fdcdcc;
-    color: #666360;
-    border-radius: 10px;
-    border: 2px solid #fdcdcc;
-
-    padding: 16px;
-
-    resize: none;
-  }
-
   button {
-    background: #fdcdcc;
+    background: #090817;
     border-radius: 10px;
-    border: 2px solid #fdcdcc;
+    border: 2px solid #090817;
 
     width: 120px;
 
-    margin-top: 10px;
+    margin-top: 50px;
     margin-left: 75%;
     padding: 15px;
-    color: #000;
+    color: #fff;
     display: flex;
     align-items: center;
 
@@ -90,28 +56,6 @@ export const Contact = styled.div`
 
 export const Background = styled.div`
   flex: 1;
-  background: url(${city});
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url(${img}) no-repeat center;
   background-size: cover;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background: rgba(26, 33, 38, 0.95);
-    height: 100%;
-    width: 100%;
-
-    h1 {
-      color: #d3342d;
-      font-size: 60px;
-      text-align: center;
-    }
-
-    img {
-      width: 772px;
-    }
-  }
 `;

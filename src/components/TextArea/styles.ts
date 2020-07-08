@@ -7,16 +7,21 @@ interface ContainerProps {
   isFilled: boolean;
   isErrors: boolean;
 }
+
 export const Container = styled.div<ContainerProps>`
   display: flex;
   align-items: center;
 
-  background: #090817;
-  border-radius: 10px;
-  border: 3px solid #090817;
-  padding: 16px;
   width: 100%;
-  color: #fff;
+  height: 100px;
+
+  background: #090817;
+  color: #666360;
+  border-radius: 10px;
+  border: 2px solid #090817;
+
+  padding: 16px;
+  margin-top: 16px;
 
   & + div {
     margin-top: 16px;
@@ -41,12 +46,14 @@ export const Container = styled.div<ContainerProps>`
       color: #2d79d3;
     `}
 
-  input {
+  textarea {
     flex: 1;
     background: transparent;
     border: 0;
     color: #f4ede8;
     font-size:16px;
+    resize: none;
+
     &::placeholder {
       color: #fff;
     }
