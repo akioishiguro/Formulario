@@ -12,7 +12,7 @@ Para a validação, foi utilizado a biblioteca <a href="https://github.com/jquen
 Para envio de emails, foi utilizado a biblioteca <a href="https://www.emailjs.com/"> EMAILJS </a> 
 
 ## :computer: Tecnologias 
-This project was developed with:
+Esse projeto foi desenvolvido com:
 
 * [ReactJS](https://pt-br.reactjs.org/)
 
