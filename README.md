@@ -1,8 +1,8 @@
 <h1 align="center">Formulário</h1>
 
-<div>
-  <img src="/assets/telas.png" width='20%' height='30%' /> 
-</div>
+<h3 align="center">
+  <img src="src/assets/telas.png" width='80%'  /> 
+</h3>
 
 <br>
 A aplicação é a implementação de um formulário, que valida as informações preenchidas pelo usuário e as envia por o e-mail. 
@@ -29,8 +29,8 @@ yarn
 yarn start
 ```
 
-<div align= "right">
-  <h6>
+
+  <h6 align= "right">
     <a href="https://www.linkedin.com/in/matheus-akio-santos-ishiguro-756394129/"> By Matheus Ishiguro :v: </a>
   </h6>
-</div>
+
