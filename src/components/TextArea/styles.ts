@@ -21,7 +21,6 @@ export const Container = styled.div<ContainerProps>`
   border: 2px solid #090817;
 
   padding: 16px;
-  margin-top: 16px;
 
   & + div {
     margin-top: 16px;
@@ -51,7 +50,7 @@ export const Container = styled.div<ContainerProps>`
     background: transparent;
     border: 0;
     color: #f4ede8;
-    font-size:16px;
+    font-size:14px;
     resize: none;
 
     &::placeholder {

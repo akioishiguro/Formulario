@@ -1,11 +1,11 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import Formulario from '../pages/Form';
+import Home from '../pages/Home';
 
 const Routes: React.FC = () => (
   <Switch>
-    <Route path="/" exact component={Formulario} />
+    <Route path="/" exact component={Home} />
   </Switch>
 );
 

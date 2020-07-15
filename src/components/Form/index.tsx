@@ -10,8 +10,8 @@ import emailjs from 'emailjs-com';
 
 // Componentes
 import getValidationErrors from '../../utils/getValidationErrors';
-import Input from '../../components/Input';
-import TextArea from '../../components/TextArea';
+import Input from '../Input';
+import TextArea from '../TextArea';
 
 // Estilizacao
 import { Container, Contact, Background } from './styles';
@@ -71,7 +71,6 @@ const Formulario: React.FC = () => {
 
       formRef.current?.reset();
     } catch (err) {
-      console.log(err);
       const errors = getValidationErrors(err);
 
       formRef.current?.setErrors(errors);
@@ -81,7 +80,9 @@ const Formulario: React.FC = () => {
     <Container>
       <Background />
       <Contact>
-        <img src={Ak} alt="Ak" />
+        <section>
+          <img src={Ak} alt="Ak" />
+        </section>
         <p>Preencha o formulário abaixo que entraremos em contato com você.</p>
 
         <Form ref={formRef} onSubmit={handleSubmit}>
