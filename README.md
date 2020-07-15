@@ -11,12 +11,12 @@ Para a validação, foi utilizado a biblioteca [YUP](https://github.com/jquense/
 <br><br>
 Para envio de emails, foi utilizado a biblioteca [EMAILJS](https://www.emailjs.com/).
 
-## :computer: Technologies 
+## :computer: Tecnologias 
 This project was developed with:
 
 * [ReactJS](https://pt-br.reactjs.org/)
 
-## :gear: How to Use
+## :gear: Como usar
 Para utilizar a aplicação, basta clonar este repositorio e instalar as dependencias, como mostra o exemplo abaixo:
 
 * FrontEnd
